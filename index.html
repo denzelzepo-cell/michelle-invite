@@ -196,8 +196,10 @@ document.body.appendChild(p);
 
 <p>I have something I’d like to ask you...</p>
 
-<button onclick="go(2)">
+<button onclick="playMusic(); go(2)">
+
 Open Invitation 💌
+
 </button>
 
 <button onclick="window.open('https://www.youtube.com/watch?v=PNpsJ--XGOo','_blank')">
@@ -377,11 +379,12 @@ window.open(
 
 }
 function playMusic(){
-  const music = document.getElementById("bgMusic");
-  music.muted = false;
-  music.volume = 0.7;
 
-  music.play().catch(function(){
+  const music = document.getElementById("bgMusic");
+
+  music.volume = 0.6;
+
+  music.play();.catch(function(){
     alert("Music couldn't start. Make sure the file is a real MP3 named song.mp3 🎵");
   });
 }
