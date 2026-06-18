@@ -274,6 +274,12 @@ document.body.appendChild(p);
 
 <p><b>Date:</b> <span id="chosenDate"></span></p>
 
+<button onclick="sendWhatsApp()">
+
+💌 Send My Choice
+
+</button>
+
 <p>Now it’s my turn to plan something special.</p>
 
 <p>— Denzel ❤️</p>
@@ -327,6 +333,30 @@ document.getElementById("chosenType").innerText=chosenType;
 document.getElementById("chosenDate").innerText=chosenDate;
 
 go(5);
+
+}
+
+function sendWhatsApp(){
+
+const message =
+
+`Hi Denzel ❤️
+
+I've accepted your invitation.
+
+Date Type: ${chosenType}
+
+Preferred Date: ${chosenDate}
+
+Looking forward to it ✨`;
+
+window.open(
+
+`https://wa.me/447538748535?text=${encodeURIComponent(message)}`,
+
+'_blank'
+
+);
 
 }
 
