@@ -373,11 +373,13 @@ window.open(
 );
 
 }
-  function playMusic(){
-  const music = document.getElementById('bgMusic');
-  music.volume = 0.5;
-  music.play().catch(() => {
-    alert("Tap again to start the music 🎵");
+function playMusic(){
+  const music = document.getElementById("bgMusic");
+  music.muted = false;
+  music.volume = 0.7;
+
+  music.play().catch(function(){
+    alert("Music couldn't start. Make sure the file is a real MP3 named song.mp3 🎵");
   });
 }
 </script>
