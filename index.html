@@ -15,7 +15,11 @@
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
+<audio id="bgMusic" loop>
 
+  <source src="song.mp3" type="audio/mpeg">
+
+</audio>
 font-family:Georgia,serif;
 
 background:linear-gradient(180deg,#ffe8f1,#fffafc);
@@ -184,7 +188,9 @@ document.body.appendChild(p);
 
 <p>I have something I’d like to ask you...</p>
 
-<button onclick="go(2)">Open Invitation 💌</button>
+<button onclick="playMusic(); go(2)">
+Open Invitation 💌
+</button>
 
 </div>
 
@@ -359,7 +365,9 @@ window.open(
 );
 
 }
-
+function playMusic(){
+  document.getElementById('bgMusic').play();
+}
 </script>
 
 </body>
